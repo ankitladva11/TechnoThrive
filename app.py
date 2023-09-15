@@ -4,22 +4,22 @@ import sys
 from features.pdf_analysis.pdf_analysis import pdfAnalysis
 from features.upload_pdf.upload import upload_pdfs
 from features.upload_csv.csv import upload_csv
+from features.buyer_persona.buyer import buyer_persona
 
 
 
 with st.sidebar:
-    st.image('logo.jpg')
-    page = st.radio('NAVIGATION',['Upload PDF','Question PDFs','Question CSVs'])
+    st.image('logo.gif')
+    page = st.radio('NAVIGATION',['Question PDFs','Question CSVs','Buyer Persona'])
     st.info('Auto ML is an application built with the objective of automating the process of ML pipelining')
 
 if page:
-
-    if page=='Upload PDF':
-        pdfAnalysis()
     if page=='Question PDFs':
         upload_pdfs()
     if page=='Question CSVs':
         upload_csv()
+    if page=='Buyer Persona':
+        buyer_persona()
 
         
 

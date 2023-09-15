@@ -18,7 +18,7 @@ def upload_csv():
 
     if file is not None:
         temp_dir = 'C:/Temp'  # Change this to the desired directory path
-        df = pd.DataFrame(file)
+        df = pd.read_csv(file)
         st.dataframe(df)
         os.makedirs(temp_dir, exist_ok=True)  # Create the directory if it 
         with NamedTemporaryFile(mode='w+b', suffix=".csv",dir=temp_dir, delete=False) as f:
