@@ -7,10 +7,8 @@ import plotly.express as px
 import datetime
 # from utils.model import *
 # from utils.kmeans_feature_importance import KMeansInterp
-# from features.customer_segmentation_true.utils.model import *
-from .utils.model import *
-from .utils.kmeans_feature_importance import KMeansInterp
-# from features.customer_segmentation_true.utils.kmeans_feature_importance import KMeansInterp
+from features.customer_segmentation_true.utils.model import *
+from features.customer_segmentation_true.utils.kmeans_feature_importance import KMeansInterp
 from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 import mlxtend

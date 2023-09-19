@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from langchain.agents import create_csv_agent
 from langchain.llms import OpenAI
 import os
-# os.environ['OPENAI_API_KEY'] = "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"
+
 
 def upload_csv():
     load_dotenv()

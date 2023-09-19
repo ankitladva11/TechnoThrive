@@ -5,7 +5,7 @@ import sys
 from features.upload_pdf.upload import upload_pdfs
 from features.upload_csv.csv import upload_csv
 from features.buyer_persona.buyer import buyer_persona
-from features.customer_segmentation_true.app import runner
+# from features.customer_segmentation_true.app import runner
 
 st.set_page_config(page_title="SamahGrah",page_icon="💰")
 
@@ -21,8 +21,8 @@ if page:
         upload_csv()
     if page=='Buyer Persona':
         buyer_persona()
-    if page=="Consumer profiling":
-        runner()
+    # if page=="Consumer profiling":
+    #     runner()
 
 
         
