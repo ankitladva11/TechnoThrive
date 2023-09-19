@@ -11,7 +11,7 @@ from features.upload_pdf.htmlTemplates import css,bot_template,user_template
 from langchain.llms import HuggingFaceHub
 import os
 
-os.environ['OPENAI_API_KEY'] = "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"
+# os.environ['OPENAI_API_KEY'] = "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"
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
@@ -77,7 +77,8 @@ def upload_pdfs():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Chat with multiple PDFs :books:")
+    st.header("Extract information from multiple PDFs :books:")
+    st.subheader("Useful for extracting, summarising financial reports and other documents")
     st.divider()
     st.subheader("Your documents")
     pdf_docs = st.file_uploader(

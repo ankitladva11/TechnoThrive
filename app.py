@@ -1,25 +1,29 @@
 import streamlit as st
 import pandas as pd
 import sys
-from features.pdf_analysis.pdf_analysis import pdfAnalysis
+# from features.pdf_analysis.pdf_analysis import pdfAnalysis
 from features.upload_pdf.upload import upload_pdfs
 from features.upload_csv.csv import upload_csv
 from features.buyer_persona.buyer import buyer_persona
+from features.customer_segmentation_true.app import runner
 
-
+st.set_page_config(page_title="SamahGrah",page_icon="💰")
 
 with st.sidebar:
     st.image('logo.gif')
-    page = st.radio('NAVIGATION',['Question PDFs','Question CSVs','Buyer Persona'])
-    st.info('Auto ML is an application built with the objective of automating the process of ML pipelining')
+    page = st.radio('NAVIGATION',['AI Powered PDFs chatbot','CSVs data extractor','Buyer Persona','Consumer profiling','Your Financial Analyst'])
+    st.info('SamahGrah is a one-stop solution to all the financial queries')
 
 if page:
-    if page=='Question PDFs':
+    if page=='AI Powered PDFs chatbot':
         upload_pdfs()
-    if page=='Question CSVs':
+    if page=='CSVs data extractor':
         upload_csv()
     if page=='Buyer Persona':
         buyer_persona()
+    if page=="Consumer profiling":
+        runner()
+
 
         
 
