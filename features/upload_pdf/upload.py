@@ -54,6 +54,10 @@ def get_conversation_chain(vectorstore):
 
 
 def handle_userinput(user_question):
+    if "conversation" not in st.session_state:
+        st.session_state.conversation = None
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = None
     response = st.session_state.conversation({'question': user_question})
     st.session_state.chat_history = response['chat_history']
 
