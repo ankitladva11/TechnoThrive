@@ -11,7 +11,7 @@ from features.upload_pdf.htmlTemplates import css,bot_template,user_template
 from langchain.llms import HuggingFaceHub
 import os
 
-
+os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
